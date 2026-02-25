@@ -43,25 +43,49 @@
 }
 </style>
 <style>
-    .service-link {
+   .service-link {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 
 .services-thumb {
+    position: relative;
     cursor: pointer;
-    transition: all 0.25s ease;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.35s ease;
 }
 
+/* Efek hover naik + glow neon */
 .services-thumb:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 
+        0 20px 40px rgba(0,0,0,0.3),
+        0 0 20px rgba(37,211,102,0.6);
 }
 
+/* Efek klik HP (pop effect) */
 .services-thumb:active {
-    transform: scale(0.96);
-    box-shadow: 0 8px 20px rgba(37,211,102,0.6);
+    transform: scale(0.92) rotate(-1deg);
+    box-shadow: 
+        0 8px 20px rgba(37,211,102,0.8);
+}
+
+/* Efek garis neon animasi */
+.services-thumb::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #25D366, #00ffcc, #25D366);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.services-thumb:hover::before {
+    opacity: 1;
 }
 </style>
 <!--
@@ -624,6 +648,7 @@ text-align:right;
 
     </body>
 </html>
+
 
 
 
