@@ -100,6 +100,34 @@
     }
 }
 </style>
+
+<style>
+.booking-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter: blur(5px);
+  z-index:9999;
+  justify-content:center;
+  align-items:center;
+}
+
+.booking-box{
+  background:#fff;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:420px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.3);
+  animation:fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn{
+  from{transform:translateY(20px);opacity:0;}
+  to{transform:translateY(0);opacity:1;}
+}
+</style>
 <!--
 
 TemplateMo 585 Barber Shop
@@ -254,7 +282,7 @@ https://templatemo.com/tm-585-barber-shop
                     </section>
 
 
-                    <section class="services-section section-padding" id="section_3">
+                     <section class="services-section section-padding" id="section_3">
                         <div class="container">
                             <div class="row">
 
@@ -263,9 +291,12 @@ https://templatemo.com/tm-585-barber-shop
                                 </div>
 
                                 <div class="col-lg-6 col-12 mb-4">
-                                    <a href="https://wa.me/6282285385098?text=Halo%20TuanCukur%20%F0%9F%91%8B%0ASaya%20mau%20booking%3A%0A%0ALayanan%3A%20Pangkas%20Rambut%0AHarga%3A%20Rp%2020.000%0A%0ANama%3A%0ATanggal%3A%0AJam%3A"
-                                        target="_blank"
-                                        style="text-decoration:none;color:inherit;">
+<a href="#"
+   class="open-booking"
+   data-layanan="Pangkas Rambut"
+   data-harga="Rp 20.000"
+   style="text-decoration:none;color:inherit;">
+                                        
                                     <div class="services-thumb">
                                         <img src="images/services/woman-cutting-hair-man-salon.jpg" class="services-image img-fluid" alt="">
 
@@ -278,36 +309,16 @@ https://templatemo.com/tm-585-barber-shop
     <div class="booking-overlay">
         💬 Booking via WhatsApp
     </div>
-           
                                     </div>
-                                     </a>   <!-- TAMBAHKAN BARIS INI -->
-                                </div>
-
-                                <div class="col-lg-6 col-12 mb-4">
-                                    <a href="https://wa.me/6282285385098?text=Halo%20TuanCukur%20%F0%9F%91%8B%0ASaya%20mau%20booking%3A%0A%0ALayanan%3A%20Cuci%20Rambut%0AHarga%3A%20Rp%205.000%0A%0ANama%3A%0ATanggal%3A%0AJam%3A"
-                                    target="_blank"
-                                    style="text-decoration:none;color:inherit;">
-                                    <div class="services-thumb">
-                                        <img src="images/services/hairdresser-grooming-their-client.jpg" class="services-image img-fluid" alt="">
-
-                                        <div class="services-info d-flex align-items-end">
-                                            <h4 class="mb-0">Cuci rambut</h4>
-
-                                            <strong class="services-thumb-price">Rp 5.000</strong>
-                                        </div>
- <!-- Tambahkan ini -->
-    <div class="booking-overlay">
-        💬 Booking via WhatsApp
-    </div>
-           
-                                    </div>
-                                     </a>   <!-- TAMBAHKAN BARIS INI -->
+                                    </a>   <!-- TAMBAHKAN BARIS INI -->
                                 </div>
 
                                 <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                                    <a href="https://wa.me/6282285385098?text=Halo%20TuanCukur%20%F0%9F%91%8B%0ASaya%20mau%20booking%3A%0A%0ALayanan%3A%20Cukur%20Jenggot%0AHarga%3A%20Rp%2015.000%0A%0ANama%3A%0ATanggal%3A%0AJam%3A"
-                                    target="_blank"
-                                    style="text-decoration:none;color:inherit;">
+<a href="#"
+   class="open-booking"
+   data-layanan="Cukur jenggot"
+   data-harga="Rp 15.000"
+   style="text-decoration:none;color:inherit;">
                                     <div class="services-thumb">
                                         <img src="images/services/hairdresser-grooming-client.jpg" class="services-image img-fluid" alt="">
 
@@ -320,15 +331,16 @@ https://templatemo.com/tm-585-barber-shop
     <div class="booking-overlay">
         💬 Booking via WhatsApp
     </div>
-           
                                     </div>
-                                     </a>   <!-- TAMBAHKAN BARIS INI -->
+                                    </a>   <!-- TAMBAHKAN BARIS INI -->
                                 </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <a href="https://wa.me/6282285385098?text=Halo%20TuanCukur%20%F0%9F%91%8B%0ASaya%20mau%20booking%3A%0A%0ALayanan%3A%20Pangkas%20Anak%0AHarga%3A%20Rp%2015.000%0A%0ANama%3A%0ATanggal%3A%0AJam%3A"
-                                    target="_blank"
-                                    style="text-decoration:none;color:inherit;">
+<a href="#"
+   class="open-booking"
+   data-layanan="Anak - anak"
+   data-harga="Rp 15.000"
+   style="text-decoration:none;color:inherit;">
                                     <div class="services-thumb">
                                         <img src="images/services/boy-getting-haircut-salon-front-view.jpg" class="services-image img-fluid" alt="">
 
@@ -341,10 +353,56 @@ https://templatemo.com/tm-585-barber-shop
     <div class="booking-overlay">
         💬 Booking via WhatsApp
     </div>
-           
                                     </div>
-                                     </a>   <!-- TAMBAHKAN BARIS INI -->
+                                    </a>   <!-- TAMBAHKAN BARIS INI -->
                                 </div>
+ <div class="col-lg-6 col-12 mb-4">
+<a href="#"
+   class="open-booking"
+   data-layanan="Cuci Rambut"
+   data-harga="Rp 5.000"
+   style="text-decoration:none;color:inherit;">
+                                    <div class="services-thumb">
+                                        <img src="images/services/hairdresser-grooming-their-client.jpg" class="services-image img-fluid" alt="">
+
+                                        <div class="services-info d-flex align-items-end">
+                                            <h4 class="mb-0">Cuci rambut</h4>
+
+                                            <strong class="services-thumb-price">Rp 5.000</strong>
+                                        </div>
+                                         <!-- Tambahkan ini -->
+    <div class="booking-overlay">
+        💬 Booking via WhatsApp
+    </div>
+                                    </div>
+                                    </a>   <!-- TAMBAHKAN BARIS INI -->
+                                </div>
+<div class="col-lg-6 col-12 mb-4">
+<a href="#"
+   class="open-booking"
+   data-layanan="Potongan Pisau Cukur"
+   data-harga="Rp 5.000"
+   style="text-decoration:none;color:inherit;">
+                                        
+    <div class="services-thumb">
+        <img src="images/services/imuar3.webp" class="services-image img-fluid" alt="">
+
+        <div class="services-info d-flex align-items-end">
+            <h4 class="mb-0">Potongan Pisau Cukur</h4>
+
+            <strong class="services-thumb-price">Rp 5.000</strong>
+        </div>
+
+        <!-- Tambahkan ini -->
+        <div class="booking-overlay">
+            💬 Booking via WhatsApp
+        </div>
+
+    </div>
+</a>
+</div>
+
+
 
                             </div>
                         </div>
@@ -672,14 +730,109 @@ text-align:right;
 
 </div>
 
+<div id="bookingModal" class="booking-overlay">
+  <div class="booking-box">
+
+    <h4 id="modalService" class="mb-1"></h4>
+    <p id="modalPrice" class="text-muted mb-3"></p>
+
+    <input type="text" id="custName" placeholder="Nama Lengkap" class="form-control mb-2">
+    <input type="date" id="custDate" class="form-control mb-2">
+    <select id="custTime" class="form-control mb-3"></select>
+
+    <button onclick="sendToWA()" class="btn btn-dark w-100 mb-2">
+      Booking Sekarang
+    </button>
+
+    <button onclick="closeModal()" class="btn btn-outline-secondary w-100">
+      Batal
+    </button>
+
+  </div>
+</div>
+
         <!-- JAVASCRIPT FILES -->
         <script src="js/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/custom.js"></script>
 
+<script>
+let selectedService = "";
+let selectedPrice = "";
+
+document.querySelectorAll(".open-booking").forEach(btn => {
+  btn.addEventListener("click", function(e){
+    e.preventDefault();
+
+    selectedService = this.dataset.layanan;
+    selectedPrice = this.dataset.harga;
+
+    document.getElementById("modalService").innerText = selectedService;
+    document.getElementById("modalPrice").innerText = selectedPrice;
+
+    document.getElementById("bookingModal").style.display = "flex";
+  });
+});
+
+function closeModal(){
+  document.getElementById("bookingModal").style.display = "none";
+}
+
+document.getElementById("custDate").addEventListener("change", generateTimeOptions);
+
+function generateTimeOptions(){
+  const timeSelect = document.getElementById("custTime");
+  timeSelect.innerHTML = "";
+
+  const selectedDate = document.getElementById("custDate").value;
+  if(!selectedDate) return;
+
+  const today = new Date();
+  const nowHour = today.getHours();
+
+  for(let hour = 10; hour <= 22; hour++){
+    if(selectedDate === today.toISOString().split("T")[0] && hour <= nowHour){
+      continue; // Lewati jam yang sudah lewat hari ini
+    }
+
+    let option = document.createElement("option");
+    option.value = hour.toString().padStart(2,"0") + ":00";
+    option.textContent = hour.toString().padStart(2,"0") + ":00";
+    timeSelect.appendChild(option);
+  }
+}
+
+function sendToWA(){
+  const name = document.getElementById("custName").value;
+  const date = document.getElementById("custDate").value;
+  const time = document.getElementById("custTime").value;
+
+  if(!name || !date || !time){
+    alert("Lengkapi semua data dulu!");
+    return;
+  }
+
+  const message = `Halo TuanCukur 👋
+Saya mau booking:
+
+Layanan: ${selectedService}
+Harga: ${selectedPrice}
+
+Nama: ${name}
+Tanggal: ${date}
+Jam: ${time}`;
+
+  const url = "https://wa.me/6282285385098?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+  closeModal();
+}
+</script>
+
     </body>
 </html>
+
 
 
 
